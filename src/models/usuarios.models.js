@@ -25,7 +25,7 @@ const Usuarios = sequelize.define('Usuarios', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    avartarURL:{
+    avatarURL:{
         type: DataTypes.STRING,
         allowNull: false,
     },
