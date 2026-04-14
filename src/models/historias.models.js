@@ -19,16 +19,7 @@ const Historias = sequelize.define('Historias', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    fecha_publicacion:{
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW
-    },
-    fecha_actualizacion:{
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW
-    },
+    
     estado:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -53,6 +44,9 @@ const Historias = sequelize.define('Historias', {
 },{
     tableName: 'historias',
     timestamps: true,
+    createdAt: 'fecha_publicacion',
+    updatedAt: 'fecha_actualizacion',
+
     indexes: [
         {
             unique: true,

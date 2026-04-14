@@ -20,11 +20,7 @@ const Usuarios = sequelize.define('Usuarios', {
         type: DataTypes.STRING,
         allowNull: false,
     },
-    fecha_registro:{
-        type: DataTypes.DATE,
-        allowNull: false,
-        defaultValue: DataTypes.NOW
-    },
+    
     biografia:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -54,6 +50,8 @@ const Usuarios = sequelize.define('Usuarios', {
 },{
     tableName: 'usuarios',
     timestamps: true,
+    createdAt: 'fecha_registro',
+    updatedAt: 'fecha_actualizacion'
 });
 
 module.exports = Usuarios;
